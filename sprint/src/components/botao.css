@@ -1,13 +1,8 @@
-.botao {
-    padding: 12px 22px;
-    background-color: #ff5e5b;
-    border-radius: 10px;
-    color: #ffffff;
-    font-weight: 600;
-    transition: 0.25s ease;
+.botao-transicao{
+    padding: 10px;
 }
 
-.botao:hover {
+.botao-transicao:hover {
     animation: vaivolta 1.2s infinite ease-in-out;
 }
 

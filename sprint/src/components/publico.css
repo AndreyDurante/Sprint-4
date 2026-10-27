@@ -1,7 +1,7 @@
 .card-publico {
     height: 300px;
     width: 300px;
-    background-color: #1f1f1f;
+    background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     display: flex;
