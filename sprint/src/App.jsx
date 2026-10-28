@@ -54,20 +54,7 @@ function App() {
               </a>
             </div>
 
-            <div className="mt-12 grid w-full max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-8 text-center sm:text-left">
-              <div>
-                <p className="text-2xl font-black text-white sm:text-3xl">0.15s</p>
-                <p className="mt-1 text-xs text-neutral-400">Disparo ultra rápido</p>
-              </div>
-              <div>
-                <p className="text-2xl font-black text-white sm:text-3xl">100%</p>
-                <p className="mt-1 text-xs text-neutral-400">Zero menus confusos</p>
-              </div>
-              <div>
-                <p className="text-2xl font-black text-white sm:text-3xl">1 Toque</p>
-                <p className="mt-1 text-xs text-neutral-400">Ergonomia total</p>
-              </div>
-            </div>
+    
           </article>
 
           <div className="relative flex w-full items-center justify-center lg:w-1/2">
