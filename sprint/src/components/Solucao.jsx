@@ -1,16 +1,30 @@
-const Solucao = ({titulo, icone, texto, imagem, alt}) => {
+const Solucao = ({ titulo, texto, imagem, alt, tag }) => {
     return (
-        <article className="flex flex-col items-center gap-6">
-        <div className="group flex min-h-48 w-full max-w-sm flex-col items-center justify-center gap-5 rounded-2xl border border-white/10 px-3 py-6 shadow-lg transition duration-700 hover:scale-105 hover:border-accent">
-            <div className="text-center text-white">
-                <h3 className="flex items-center justify-center gap-2 text-2xl font-normal group-hover:underline group-hover:decoration-accent group-hover:decoration-2">{titulo} <span>{icone}</span></h3>
+        <article className="group relative flex flex-col items-center justify-between rounded-3xl border border-white/10 bg-neutral-950/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/40">
+            <div className="flex w-full flex-col items-center text-center">
+                {tag && (
+                    <span className="mb-3 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                        {tag}
+                    </span>
+                )}
+                <h3 className="text-2xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-white sm:text-3xl">
+                    {titulo}
+                </h3>
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-neutral-300 sm:text-base">
+                    {texto}
+                </p>
             </div>
-            <p className="w-[90%] text-base leading-relaxed text-[#d8d8d8] sm:text-lg">{texto}</p>
-        </div>
-        <div className="flex justify-center">
-            <img className="aspect-[3/5] w-72 object-contain" src={imagem} alt={alt} />
-        </div>
+            
+            <div className="relative mt-6 flex w-full items-center justify-center overflow-hidden rounded-2xl border border-white/5 bg-neutral-900/40 p-4">
+                <img
+                    className="relative z-10 aspect-[3/5] w-64 object-contain transition-transform duration-700 ease-out group-hover:scale-105"
+                    src={imagem}
+                    alt={alt || titulo}
+                    loading="lazy"
+                />
+            </div>
         </article>
-    )}
+    )
+}
 
 export default Solucao

@@ -1,12 +1,11 @@
-
-const Informacoes = ({titulo, i1, i2, i3, i4}) => {
+const Informacoes = ({ titulo, i1, i2, i3, i4 }) => {
     return (
-        <div className="ml-5 flex w-1/5 flex-col gap-5">
-            <h3 className="text-xl text-accent sm:text-2xl">{titulo}</h3>
-            <p>{i1}</p>
-            <p>{i2}</p>
-            <p>{i3}</p>
-            <p>{i4}</p>
+        <div className="flex flex-col gap-2.5 text-left">
+            <h3 className="text-base font-bold text-accent sm:text-lg">{titulo}</h3>
+            {i1 && <p className="text-sm text-neutral-300">{i1}</p>}
+            {i2 && <p className="text-sm text-neutral-300">{i2}</p>}
+            {i3 && <p className="text-sm text-neutral-300">{i3}</p>}
+            {i4 && <p className="text-sm text-neutral-300">{i4}</p>}
         </div>
     )
 }

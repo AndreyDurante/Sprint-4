@@ -1,15 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
-import './botao.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-const Botao = ({ link }) => {
+const Botao = ({ link, texto = "Conheça a solução" }) => {
     return (
         <a
-            className="botao-transicao inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 font-semibold text-white"
+            className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#e64a47] active:scale-95"
             href={link}
         >
-            Conheça a solução
-            <FontAwesomeIcon icon={faCircleArrowDown} className="text-base" />
+            <span>{texto}</span>
+            <FontAwesomeIcon icon={faArrowDown} className="text-sm transition-transform duration-300 group-hover:translate-y-0.5" />
         </a>
     )
 }

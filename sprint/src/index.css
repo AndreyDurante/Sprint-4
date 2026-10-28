@@ -7,8 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
   }
 
   html {
@@ -19,8 +17,28 @@
   body,
   #root {
     min-height: 100%;
-    background-color: #000000;
+    background-color: #070707;
     color: #f5f5f5;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #ff5e5b;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff5e5b;
   }
 
   a {
@@ -33,6 +51,20 @@
   --font-poppins: "Poppins", sans-serif;
   --font-scoutie: "Scoutie Sans", sans-serif;
   --color-accent: #ff5e5b;
-  --color-surface: #1f1f1f;
+  --color-accent-hover: #e64a47;
+  --color-surface: #141414;
+  --color-surface-card: #171717;
 }
-
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
